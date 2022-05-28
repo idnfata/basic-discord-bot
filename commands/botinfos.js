@@ -11,7 +11,7 @@ module.exports = {
       .setColor('6d6ee8')
       .setDescription('Alien Fest Bot')
       // .setDescription('Developed with the 💜 by `•OofyOofOof•#2018`\n\n[`Github`](https://github.com/blackknight683) | [`Twitch`](https://www.twitch.tv/oofydaoofer) | [`Discord`](https://discord.gg/S2GGa23) | [`Youtube`](https://youtube.com/c/BlackKnight683)')
-      .setFooter(client.user.tag, client.user.avatarURL())
+      .setFooter({text: `${client.user.tag, client.user.avatarURL()}`})
       .setTimestamp();
     await interaction.reply({
       embeds: [embed]

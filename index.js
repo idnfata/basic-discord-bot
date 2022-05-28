@@ -7,14 +7,14 @@ const {
     Intents
 } = require('discord.js');
 const chalk = require('chalk')
-const client = new Client({ intents :[Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS], partials: ["CHANNEL", "MESSAGE", "GUILD_MEMBER", "REACTION"] });
+const client = new Client({ intents :[Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGE_REACTIONS], partials: ["CHANNEL", "MESSAGE", "GUILD_MEMBER", "REACTION"] });
 const config = require('./config.json');
 
 
 module.exports = client
 
 
-client.commands = new Collection();
+client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 client.discord = Discord;
 client.config = config;

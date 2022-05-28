@@ -48,14 +48,13 @@ module.exports = {
                 
                 Info program-program selanjutnya akan kami infokan lewat announcement. Selamat menikmati channel-channel komunitas AlienFest!`)
                 .addField("\u200B", mapped)
-                .setFooter("Reaction Roles by Alien Fest")
+                .setFooter({text: "Reaction Roles by Alien Fest"})
                 .setTimestamp()
 
             channel.send({ embeds: [rrEmbed] }).then((msg) => {
 
                 data.Message = msg.id
                 data.save()
-
                 const reactions = Object.values(data.Roles).map((val) => val[1].id)
 
                 reactions.map(

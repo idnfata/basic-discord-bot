@@ -58,7 +58,6 @@ module.exports = {
                 }).save()
 
             }
-
             message.reply("A new role has been added to the reaction role panel")
 
         })

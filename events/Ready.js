@@ -1,5 +1,4 @@
 const client = require("../index")
-require('dotenv').config()
 // client.on('ready', async() => {
 //     console.log(`${client.user.tag} is now online`)
 // })
@@ -19,9 +18,9 @@ module.exports = {
     function sendTicketMSG() {
       const embed = new client.discord.MessageEmbed()
         .setColor('6d6ee8')
-        .setAuthor('Ticket', client.user.avatarURL())
+        .setAuthor({name: 'Ticket', iconURL: client.user.avatarURL()})
         .setDescription('Klik tombol di bawah untuk membuat ticket 👇')
-        .setFooter(`${client.user.tag} || @alienfest.id`, client.user.displayAvatarURL())
+        .setFooter({text:`${client.user.tag} || @alienfest.id`, iconURL: client.user.displayAvatarURL()})
       const row = new client.discord.MessageActionRow()
         .addComponents(
           new client.discord.MessageButton()
